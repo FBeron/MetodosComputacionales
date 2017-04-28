@@ -1,0 +1,73 @@
+\documentclass[11pt, spanish]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\title{Ecuacion de calor en 2D}
+\author{Felipe Berón}
+\date{\today}
+ 
+\begin{document}
+
+\maketitle
+
+A continuacion se muestran los resultados para el taller. Este consistía en resolver la ecuacion de calor para una placa vidimensional con para tres casos y dos condiciones de frontera.
+
+En ambos casos toda la placa comienza con una temperatura de 50°C en todas partes excepto en un peque rectángulo que inicia en 100°C.
+
+Para todos los casos y condiciones se muestra la temperatura en todos los puntos de la placa para el t = 0s, t = 100s y t= 2500s. Adicionalmente se muetra la temperatura promedi de toda la placa para cada instante de tiempo.
+
+\section{Sin fuente de temperatura}
+En este caso no hay nada que mantenga el rectángulo que inica en 100°C a esta temperatura y por lo tanto la temperatura de estos puntos disminulle mientras que los de los demás aumenta.
+\subsection{Frontera fija}
+La frontera de la placa se mantiene a 50°C independientemente de la temperatura de los punntos de la placa adyacentes.
+
+\includegraphics{TPlacaSinFuenteFijas0.png}
+\includegraphics{TPlacaSinFuenteFijas100.png}
+\includegraphics{TPlacaSinFuenteFijas2500.png}
+\includegraphics{TpromedioSinFuenteFijas.png}
+
+\subsection{Frontera libre}
+La frontera de la placa tiene la misma temeratura que los nodos adyacentes a esta, por lo tanto la transferencia de calor en esta dirección es cero.
+
+\includegraphics{TPlacaSinFuenteLibre0.png}
+\includegraphics{TPlacaSinFuenteLibre100.png}
+\includegraphics{TPlacaSinFuenteLibre2500.png}
+\includegraphics{TpromedioSinFuenteLibre.png}
+
+\subsection{Frontera periodica}
+La temperatura de una frontera es igual al borde de la placa opuesto a esta.
+
+\includegraphics{TPlacaSinFuentePeriodicas0.png}
+\includegraphics{TPlacaSinFuentePeriodicas100.png}
+\includegraphics{TPlacaSinFuentePeriodicas2500.png}
+\includegraphics{TpromedioSinFuentePeriodicas.png}
+
+\section{Con fuente de temperatura}
+En este caso hay una fuente de calor externa que mantiene la temperatura del rectangulo a 100°C a esta temperatura.
+\subsection{Frontera fija}
+La frontera de la placa se mantiene a 50°C independientemente de la temperatura de los punntos de la placa adyacente.
+
+\includegraphics{TPlacaConFuenteFijas0.png}
+\includegraphics{TPlacaConFuenteFijas100.png}
+\includegraphics{TPlacaConFuenteFijas2500.png}
+\includegraphics{TpromedioConFuenteFijas.png}
+
+\subsection{Frontera libre}
+La frontera de la placa tiene la misma temeratura que los nodos adyacentes a esta, por lo tanto la transferencia de calor en esta dirección es cero.
+
+\includegraphics{TPlacaConFuenteLibre0.png}
+\includegraphics{TPlacaConFuenteLibre100.png}
+\includegraphics{TPlacaConFuenteLibre2500.png}
+\includegraphics{TpromedioConFuenteLibre.png}
+
+\subsection{Frontera periodica}
+La temperatura de una frontera es igual al borde de la placa opuesto a esta.
+
+\includegraphics{TPlacaConFuentePeriodicas0.png}
+\includegraphics{TPlacaConFuentePeriodicas100.png}
+\includegraphics{TPlacaConFuentePeriodicas2500.png}
+\includegraphics{TpromedioConFuentePeriodicas.png}
+\end{document}
+
