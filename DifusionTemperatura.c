@@ -121,11 +121,16 @@ void solve_dt(float data[L][L], float alpha, int caso, int condicion){
     int i,j;
     for(i=A; i<B;i++){
         for(j=A;j<B;j++){
-	  if((caso == 2)&&((i>=A+20) && (i<A+40) && (j>=A+45) && (j<A+55))){
-	  }else{
-	    data_new[i][j] = data[i][j] +  alpha*(data[i+1][j] + data[i-1][j] + data[i][j+1] + data[i][j-1]- 4*data[i][j]);
-	  }
+	  data_new[i][j] = data[i][j] +  alpha*(data[i+1][j] + data[i-1][j] + data[i][j+1] + data[i][j-1]- 4*data[i][j]);
         }
+    }
+
+    if(caso == 2){
+      for(i = A+20; i<A+40;i++){
+	for(j = A+45; j<A+55;j++){
+	  data_new[i][j] = 100.0;
+	}
+      }
     }
     copy(data, data_new);
 }
